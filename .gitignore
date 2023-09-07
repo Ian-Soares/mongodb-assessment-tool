@@ -1,0 +1,6 @@
+venv
+env
+virtualenv
+__pycache__
+.env
+reports
