@@ -17,8 +17,9 @@ git clone https://github.com/Ian-Soares/mongodb-assessment-tool.git
 ```
 **Install dependencies**
 ```
-cd mongodb-assessment
-pip3 install -r requirements.txt
+cd mongodb-assessment-tool
+python3 -m pip install --upgrade pip
+pip install -r requirements.txt
 ```
 
 ## Monitoring tool usage
@@ -77,7 +78,7 @@ options:
 ### Examples
 Specify input log file (inside reports directory):
 ```
-python3 report-maker.py --log "monitoring-mongodb.log"
+python3 report-maker.py --log "monitoring-mongodb.log" -n 8
 ```
 
 Specify both input and output names:
@@ -89,4 +90,3 @@ After running those two scripts, there will be created 3 files:
 1. ./reports/xyz.log  - **Log file** with **raw data** from the monitoring script
 2. ./reports/xyz.xlsx - **Excel file** with the data in columns and the statistics of it: **mean, min and max** values
 3. ./reports/xyz.png  - **Image** with a data **graph**
-
